@@ -1,10 +1,16 @@
 // Assignment code here
 
 
-var lower = "qwertyuiopasdfghjklzxcvbnm";
-var upper = "QWERTYUIOPASDFGHJKLZXCVBNM";
-var num = "1234567890";
-var spec = "!@#$%^&*()";
+var characters = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()";
+
+var pwlen = 1;
+var password ="jeremy";
+
+for (var i = 0; i < pwlen; i++) {
+  var ranval = Math.floor(Math.random() * characters.length);
+  password = password + " odaniel";
+}
+console.log(password);
 
 
 
