@@ -1,6 +1,13 @@
 // Assignment code here
 
 
+var lower = "qwertyuiopasdfghjklzxcvbnm";
+var upper = "QWERTYUIOPASDFGHJKLZXCVBNM";
+var num = "1234567890";
+var spec = "!@#$%^&*()";
+
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
