@@ -1,59 +1,36 @@
-// Assignment code here
+var generateBtn = document.querySelector("#generate");
 
-// GIVEN I need a new, secure password
-
-
-
-//WHEN I click the button to generate a password
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
-
-//THEN I am presented with a series of prompts for password criteria
-var lowerChar = prompt("Do you want lowercase letters?")
-var upperChar = prompt("Do you want uppercase letters?")
-var numChar = prompt("Do you want numbers?")
-var specChar = prompt("Do you want special charaters?")
-
-
-//WHEN prompted for password criteria
-
-
-
-//THEN I select which criteria to include in the password
+function generatePassword() {
+// PROMPT USER FOR PASSWORD CRITERIA
+  var criteria = function() {
+//  Password length betwee 8-128
+    var promptLength = window.prompt('Please select Password length between 8-128 characters.');
+  
+//  Include upper/lowercase, numbers, special characters
+    var upperCase = window.prompt('Do you want to use Uppercase letters?')
+    var lowerCase = window.prompt('Do you want to use Lowercase letters?')
+    var num = window.prompt('Do you want to use Numbers?')
+    var special = window.prompt('Do you want to use Special Characters?')
+//  Validate the input (character length is correct and at least one type of character type is chosen)
+    if (condition) {
+      window.alert('Please provide a valid response.');
+      return criteria();
+    }
+  }
+  
+  return "Password goes here."
+}
 
 
 
-//WHEN prompted for the length of the password
 
 
 
-//THEN I choose a length of at least 8 characters and no more than 128 characters
+
+// Generate pnb assword
+// Display the password to the page
 
 
-
-//WHEN asked for character types to include in the password
-
-
-
-//THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-
-
-
-//WHEN I answer each prompt
-
-
-
-//THEN my input should be validated and at least one character type should be selected
-
-
-
-//WHEN all prompts are answered
-
-
-
-//THEN a password is generated that matches the selected criteria
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -63,31 +40,56 @@ function writePassword() {
 
 }
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
-//WHEN the password is generated
-//THEN the password is either displayed in an alert or written to the page
 
 
-/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// Assignment code here
+
+
+var lower = "qwertyuiopasdfghjklzxcvbnm";
+var upper = "QWERTYUIOPASDFGHJKLZXCVBNM";
+var num = "1234567890";
+var spec = "!@#$%^&*()";
+
+var pwlength = 8;
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// string of usable password characters
-var characters = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()";
+// Write password to the #password input
+function Password() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-// pasword length
-var pwlen = 120;
-var password ="";
+  passwordText.value = password;
 
-// A for loop to iterate through the character string
-for (var i = 0; i < pwlen; i++) {
-  // create ranval variable 
-  var ranval = Math.floor(Math.random() * characters.length); //6
-  // password += characters.substring(6, 7);
-  password = password + characters.substring(ranval, ranval + 1 );
 }
-console.log(password);
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 */
 
+// Assignment code here
 
+
+// Get references to the #generate element
