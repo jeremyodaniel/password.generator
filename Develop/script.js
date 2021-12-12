@@ -27,7 +27,7 @@ function generatePassword() {
 
 
 
-// Generate pnb assword
+// Generate password
 // Display the password to the page
 
 
