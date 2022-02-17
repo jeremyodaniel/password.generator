@@ -2,9 +2,8 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
 // PROMPT USER FOR PASSWORD CRITERIA
-//  var criteria = function() { (Commented out this function because you cannot define a function inside another function)
 //  Password length betwee 8-128
-    var promptLength = window.prompt('Please select Password length between 8-128 characters.');
+    var promptLength = window.prompt('Please select Password length between 8 - 128 characters.');
   
 //  Include upper/lowercase, numbers, special characters
     var upperCase = window.confirm('Do you want to use Uppercase letters?')
@@ -33,13 +32,31 @@ function generatePassword() {
     if (special) {
       tempArray = tempArray.concat(specialArray);
     }
-    console.log(tempArray);
-//  }
+    // Array and String starts with an index 0 and end with the number of length-1 
+    //eg: an array/string with length 10 will have indexes 0-9 
+    //to get a specific element from the array we do : array[0] -> this pulls out the element at  0th index 
+    //console.log(tempArray[0]);
+    console.log(promptLength);
 
+    //varic  random passwd
+     //for (var i = 0 ; i < promptLength  ; i++){
+       //passwordArray.push(tempArray[Math.floor(Math.random() * tempArray.length)]);
+     //}
+    for (var i = 0; i < 10; i++) {
+        passwordArray.push(i);
+        i = i*10;
+    }
+    //passwordArray.push(1);
+    //passwordArray.push(2);
+     console.log(passwordArray);
+     //console.log(passwordArray.length);
+     
+//  }
+  
 
 
   
-  return "Password goes here."
+  return passwordArray;
 }
 
 
