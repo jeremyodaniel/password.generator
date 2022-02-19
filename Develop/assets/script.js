@@ -2,8 +2,10 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
 // PROMPT USER FOR PASSWORD CRITERIA
-//  Password length betwee 8-128
-    var promptLength = window.prompt('Please select Password length between 8 - 128 characters.');
+//  Password length betwee 8-128    
+    var promptLength = parseInt(window.prompt('Please select Password length between 8 - 128 characters.'));
+  
+
   
 //  Include upper/lowercase, numbers, special characters
     var upperCase = window.confirm('Do you want to use Uppercase letters?')
@@ -32,38 +34,16 @@ function generatePassword() {
     if (special) {
       tempArray = tempArray.concat(specialArray);
     }
-    // Array and String starts with an index 0 and end with the number of length-1 
-    //eg: an array/string with length 10 will have indexes 0-9 
-    //to get a specific element from the array we do : array[0] -> this pulls out the element at  0th index 
-    //console.log(tempArray[0]);
-    console.log(promptLength);
 
-    //varic  random passwd
-     //for (var i = 0 ; i < promptLength  ; i++){
-       //passwordArray.push(tempArray[Math.floor(Math.random() * tempArray.length)]);
-     //}
-    for (var i = 0; i < 10; i++) {
-        passwordArray.push(i);
-        i = i*10;
+    for (var i = 0; i < promptLength; i++) {
+      passwordArray.push(tempArray[Math.floor(Math.random() * tempArray.length)]);
     }
-    //passwordArray.push(1);
-    //passwordArray.push(2);
+
      console.log(passwordArray);
      //console.log(passwordArray.length);
      
-//  }
-  
-
-
-  
   return passwordArray;
 }
-
-
-
-
-
-
 
 // Generate password
 // Display the password to the page
@@ -71,11 +51,11 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword().join('');
+  console.log(password);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
